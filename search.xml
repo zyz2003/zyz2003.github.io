@@ -4,13 +4,103 @@
   
     
     <entry>
+      <title>魔改教程文章</title>
+      <link href="/2025/10/22/%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B%E6%96%87%E7%AB%A0/"/>
+      <url>/2025/10/22/%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 魔改教程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据库文章</title>
+      <link href="/2025/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E7%AB%A0/"/>
+      <url>/2025/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java基础文章</title>
+      <link href="/2025/10/22/Java%E5%9F%BA%E7%A1%80%E6%96%87%E7%AB%A0/"/>
+      <url>/2025/10/22/Java%E5%9F%BA%E7%A1%80%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Java基础 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机基础文章</title>
+      <link href="/2025/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E6%96%87%E7%AB%A0/"/>
+      <url>/2025/10/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机基础 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
-      <link href="/2025/10/19/hello-world/"/>
-      <url>/2025/10/19/hello-world/</url>
+      <link href="/2022/08/09/hello-world/"/>
+      <url>/2022/08/09/hello-world/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> 案例 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> 外挂标签 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -24,40 +114,7 @@
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>这是个人关于自己的一些介绍</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><p>这是个人喜欢的一些友链</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><p>这是个人喜欢的一些音乐</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>123213123</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>这是个人关于自己的一些介绍</p>]]></content>
       
     </entry>
     
@@ -68,7 +125,84 @@
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::after {    background: transparent !important;}[data-theme="dark"] #page-header::after {    background: transparent !important;}]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}#footer .footer-other {    padding: 0 !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::after {    background: transparent !important;}[data-theme="dark"] #page-header::after {    background: transparent !important;}/* 徽标居中对齐 */#ghbdages {    text-align: center !important;    display: block !important;    width: 100% !important;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[<p>这是第一个分类页面</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/runtime.js"/>
+      <url>/js/runtime.js</url>
+      
+        <content type="html"><![CDATA[/* 网站运行时间计时器 */(function() {    setInterval(() => {        let now = new Date();                // 旅行者1号距离计算        let startDate = new Date("08/01/2022 00:00:00");        let distance = Math.trunc(23400000000 + (now - startDate) / 1000 * 17);        let au = (distance / 149600000).toFixed(6);        // 网站运行时间计算    let siteStartDate = new Date("08/18/2024 00:00:00");    let totalSeconds = (now - siteStartDate) / 1000;    let days = Math.floor(totalSeconds / 86400); // 86400 = 24*60*60    let hours = Math.floor((totalSeconds % 86400) / 3600);    let minutes = Math.floor((totalSeconds % 3600) / 60);    let seconds = Math.round(totalSeconds % 60);        // 格式化时间（补零）    hours = String(hours).padStart(2, '0');    minutes = String(minutes).padStart(2, '0');    seconds = String(seconds).padStart(2, '0');        // 根据时间显示不同的状态图标    let content = "";    if (hours < 18 && hours >= 9) {        // 工作时间（9:00-18:00）        content = `            <img class='boardsign' src='https://s1.aigei.com/src/img/png/dc/dc8ebbd3dd0345d7be3b211a676ebdf5.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OvNY-3WP9YXq7WBOirVBihb8cqA=' title='什么时候能够实现财富自由呀~' style='height: 20px;'>            <br>            <div style="font-size:13px;font-weight:bold">                本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒                 <i id="heartbeat" class='fas fa-heartbeat'></i>                <br>                旅行者 1 号当前距离地球 ${distance} 千米，约为 ${au} 个天文单位 🚀            </div>        `;    } else {        // 休息时间        content = `            <img class='boardsign' src='https://sourcebucket.s3.ladydaily.com/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'>            <br>            <div style="font-size:13px;font-weight:bold">                本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒                 <i id="heartbeat" class='fas fa-heartbeat'></i>                <br>                旅行者 1 号当前距离地球 ${distance} 千米，约为 ${au} 个天文单位 🚀            </div>        `;    }        // 更新页面元素    const workboard = document.getElementById("workboard");    if (workboard) {        workboard.innerHTML = content;    }}, 1000);})();]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><p>这是个人喜欢的一些友链</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/runtime.css"/>
+      <url>/css/runtime.css</url>
+      
+        <content type="html"><![CDATA[/* 网站运行时间计时器样式 */#workboard {  font-size: 14px;  text-align: center;  margin: 0;}#workboard .item {  margin: 0.5rem auto;  display: block;}/* 居中显示 */.runtime-item {  display: flex;  justify-content: center;  align-items: center;  flex-direction: column;  margin: 0 auto;  padding: 0.5rem 1rem;}/* 增加一些美观的样式 */.runtime-item span {  font-weight: bold;  color: #49b1f5;}/* 适配移动端 */@media screen and (max-width: 768px) {  #workboard {    font-size: 12px;  }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/footer-beautify.css"/>
+      <url>/css/footer-beautify.css</url>
+      
+        <content type="html"><![CDATA[/* Footer Beautify */#workboard {  text-align: center;  margin: 20px 0;  padding: 15px;  background: #f5f5f5;  border-radius: 8px;}#workboard div {  color: #333;  line-height: 1.5;  font-size: 13px;  font-weight: bold;}#heartbeat {  color: #ff6b6b;}#ghbdages {  display: flex;  flex-wrap: wrap;  justify-content: center;  gap: 5px;  margin-top: 15px;}.github-badge {  display: inline-block;}.github-badge img {  border-radius: 3px;}[data-theme="dark"] #workboard {  background: #2a2a2a;}[data-theme="dark"] #workboard div {  color: #e0e0e0;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>123213123</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><p>这是个人喜欢的一些音乐</p>]]></content>
       
     </entry>
     
@@ -79,7 +213,7 @@
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>这是个人喜欢的一些电影</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>这是个人喜欢的一些电影</p>]]></content>
       
     </entry>
     

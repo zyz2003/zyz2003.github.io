@@ -1,0 +1,34 @@
+/* 网站运行时间计时器样式 */
+#workboard {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+#workboard .item {
+  margin: 0.5rem auto;
+  display: block;
+}
+
+/* 居中显示 */
+.runtime-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+/* 增加一些美观的样式 */
+.runtime-item span {
+  font-weight: bold;
+  color: #49b1f5;
+}
+
+/* 适配移动端 */
+@media screen and (max-width: 768px) {
+  #workboard {
+    font-size: 12px;
+  }
+}
