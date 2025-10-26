@@ -33,3 +33,14 @@
     display: block !important;
     width: 100% !important;
 }
+/* 小冰分类磁贴黑夜模式适配 */
+/* 一般状态 */
+[data-theme="dark"] .magnet_item{
+    background: #1e1e1e ;
+    color: antiquewhite;
+}
+/* 鼠标悬浮状态 */
+[data-theme="dark"] .magnet_item:hover {
+    background: #3ecdf1;
+    color: #f2f2f2;
+}

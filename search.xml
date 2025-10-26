@@ -110,44 +110,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>这是个人关于自己的一些介绍</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}#footer .footer-other {    padding: 0 !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::after {    background: transparent !important;}[data-theme="dark"] #page-header::after {    background: transparent !important;}/* 徽标居中对齐 */#ghbdages {    text-align: center !important;    display: block !important;    width: 100% !important;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[<p>这是第一个分类页面</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/runtime.js"/>
-      <url>/js/runtime.js</url>
-      
-        <content type="html"><![CDATA[/* 网站运行时间计时器 */(function() {    setInterval(() => {        let now = new Date();                // 旅行者1号距离计算        let startDate = new Date("08/01/2022 00:00:00");        let distance = Math.trunc(23400000000 + (now - startDate) / 1000 * 17);        let au = (distance / 149600000).toFixed(6);        // 网站运行时间计算    let siteStartDate = new Date("08/18/2024 00:00:00");    let totalSeconds = (now - siteStartDate) / 1000;    let days = Math.floor(totalSeconds / 86400); // 86400 = 24*60*60    let hours = Math.floor((totalSeconds % 86400) / 3600);    let minutes = Math.floor((totalSeconds % 3600) / 60);    let seconds = Math.round(totalSeconds % 60);        // 格式化时间（补零）    hours = String(hours).padStart(2, '0');    minutes = String(minutes).padStart(2, '0');    seconds = String(seconds).padStart(2, '0');        // 根据时间显示不同的状态图标    let content = "";    if (hours < 18 && hours >= 9) {        // 工作时间（9:00-18:00）        content = `            <img class='boardsign' src='https://s1.aigei.com/src/img/png/dc/dc8ebbd3dd0345d7be3b211a676ebdf5.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OvNY-3WP9YXq7WBOirVBihb8cqA=' title='什么时候能够实现财富自由呀~' style='height: 20px;'>            <br>            <div style="font-size:13px;font-weight:bold">                本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒                 <i id="heartbeat" class='fas fa-heartbeat'></i>                <br>                旅行者 1 号当前距离地球 ${distance} 千米，约为 ${au} 个天文单位 🚀            </div>        `;    } else {        // 休息时间        content = `            <img class='boardsign' src='https://sourcebucket.s3.ladydaily.com/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'>            <br>            <div style="font-size:13px;font-weight:bold">                本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒                 <i id="heartbeat" class='fas fa-heartbeat'></i>                <br>                旅行者 1 号当前距离地球 ${distance} 千米，约为 ${au} 个天文单位 🚀            </div>        `;    }        // 更新页面元素    const workboard = document.getElementById("workboard");    if (workboard) {        workboard.innerHTML = content;    }}, 1000);})();]]></content>
       
     </entry>
     
@@ -166,10 +133,21 @@
     
     <entry>
       <title></title>
-      <link href="/css/runtime.css"/>
-      <url>/css/runtime.css</url>
+      <link href="/js/runtime.js"/>
+      <url>/js/runtime.js</url>
       
-        <content type="html"><![CDATA[/* 网站运行时间计时器样式 */#workboard {  font-size: 14px;  text-align: center;  margin: 0;}#workboard .item {  margin: 0.5rem auto;  display: block;}/* 居中显示 */.runtime-item {  display: flex;  justify-content: center;  align-items: center;  flex-direction: column;  margin: 0 auto;  padding: 0.5rem 1rem;}/* 增加一些美观的样式 */.runtime-item span {  font-weight: bold;  color: #49b1f5;}/* 适配移动端 */@media screen and (max-width: 768px) {  #workboard {    font-size: 12px;  }}]]></content>
+        <content type="html"><![CDATA[/* 网站运行时间计时器 */(function() {    setInterval(() => {        let now = new Date();                // 旅行者1号距离计算        let startDate = new Date("08/01/2022 00:00:00");        let distance = Math.trunc(23400000000 + (now - startDate) / 1000 * 17);        let au = (distance / 149600000).toFixed(6);        // 网站运行时间计算    let siteStartDate = new Date("08/18/2024 00:00:00");    let totalSeconds = (now - siteStartDate) / 1000;    let days = Math.floor(totalSeconds / 86400); // 86400 = 24*60*60    let hours = Math.floor((totalSeconds % 86400) / 3600);    let minutes = Math.floor((totalSeconds % 3600) / 60);    let seconds = Math.round(totalSeconds % 60);        // 格式化时间（补零）    hours = String(hours).padStart(2, '0');    minutes = String(minutes).padStart(2, '0');    seconds = String(seconds).padStart(2, '0');        // 根据时间显示不同的状态图标    let content = "";    if (hours < 18 && hours >= 9) {        // 工作时间（9:00-18:00）        content = `            <img class='boardsign' src='https://s1.aigei.com/src/img/png/dc/dc8ebbd3dd0345d7be3b211a676ebdf5.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OvNY-3WP9YXq7WBOirVBihb8cqA=' title='什么时候能够实现财富自由呀~' style='height: 20px;'>            <br>            <div style="font-size:13px;font-weight:bold">                本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒                 <i id="heartbeat" class='fas fa-heartbeat'></i>                <br>                旅行者 1 号当前距离地球 ${distance} 千米，约为 ${au} 个天文单位 🚀            </div>        `;    } else {        // 休息时间        content = `            <img class='boardsign' src='https://sourcebucket.s3.ladydaily.com/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'>            <br>            <div style="font-size:13px;font-weight:bold">                本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒                 <i id="heartbeat" class='fas fa-heartbeat'></i>                <br>                旅行者 1 号当前距离地球 ${distance} 千米，约为 ${au} 个天文单位 🚀            </div>        `;    }        // 更新页面元素    const workboard = document.getElementById("workboard");    if (workboard) {        workboard.innerHTML = content;    }}, 1000);})();]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}#footer .footer-other {    padding: 0 !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::after {    background: transparent !important;}[data-theme="dark"] #page-header::after {    background: transparent !important;}/* 徽标居中对齐 */#ghbdages {    text-align: center !important;    display: block !important;    width: 100% !important;}/* 小冰分类磁贴黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_item{    background: #1e1e1e ;    color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_item:hover {    background: #3ecdf1;    color: #f2f2f2;}]]></content>
       
     </entry>
     
@@ -187,11 +165,22 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/css/runtime.css"/>
+      <url>/css/runtime.css</url>
       
-        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>123213123</p>]]></content>
+        <content type="html"><![CDATA[/* 网站运行时间计时器样式 */#workboard {  font-size: 14px;  text-align: center;  margin: 0;}#workboard .item {  margin: 0.5rem auto;  display: block;}/* 居中显示 */.runtime-item {  display: flex;  justify-content: center;  align-items: center;  flex-direction: column;  margin: 0 auto;  padding: 0.5rem 1rem;}/* 增加一些美观的样式 */.runtime-item span {  font-weight: bold;  color: #49b1f5;}/* 适配移动端 */@media screen and (max-width: 768px) {  #workboard {    font-size: 12px;  }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>这是个人喜欢的一些电影</p>]]></content>
       
     </entry>
     
@@ -209,11 +198,22 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>Hello World</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>这是个人喜欢的一些电影</p>]]></content>
+        <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>123213123</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>这是个人关于自己的一些介绍</p>]]></content>
       
     </entry>
     
