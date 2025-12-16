@@ -2518,7 +2518,7 @@ figure.highlight pre .javascript .function {
   flex: 1 auto;
   margin: 0 auto;
   padding: 40px 15px;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
 }
 @media screen and (max-width: 900px) {
@@ -2538,7 +2538,7 @@ figure.highlight pre .javascript .function {
 }
 @media screen and (min-width: 2000px) {
   .layout {
-    max-width: 60%;
+    max-width: 70%;
   }
 }
 .layout > div:first-child:not(.nc) {
@@ -2553,7 +2553,7 @@ figure.highlight pre .javascript .function {
   }
 }
 .layout > div:first-child {
-  width: 74%;
+  width: 76%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -3904,7 +3904,7 @@ figure.highlight pre .javascript .function {
   }
 }
 #aside-content {
-  width: 26%;
+  width: 24%;
 }
 @media screen and (min-width: 900px) {
   #aside-content {

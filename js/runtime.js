@@ -25,9 +25,14 @@
     let content = "";
     if (hours < 18 && hours >= 9) {
         // 工作时间（9:00-18:00）
+            // <img class='boardsign' src='https://s1.aigei.com/src/img/png/dc/dc8ebbd3dd0345d7be3b211a676ebdf5.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OvNY-3WP9YXq7WBOirVBihb8cqA=' title='什么时候能够实现财富自由呀~' style='height: 20px;'>
+            // <br>
+
         content = `
-            <img class='boardsign' src='https://s1.aigei.com/src/img/png/dc/dc8ebbd3dd0345d7be3b211a676ebdf5.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OvNY-3WP9YXq7WBOirVBihb8cqA=' title='什么时候能够实现财富自由呀~' style='height: 20px;'>
-            <br>
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+                <img class='boardsign' src='https://s1.aigei.com/src/img/png/dc/dc8ebbd3dd0345d7be3b211a676ebdf5.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OvNY-3WP9YXq7WBOirVBihb8cqA=' style='height: 20px; margin-right: 8px;' title='你又来看我了呀😊~'>
+                <span style="font-size:13px; font-weight:bold; color: var(--text-highlight-color);">什么时候能够实现财富自由呀~</span>
+            </div>
             <div style="font-size:13px;font-weight:bold">
                 本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒 
                 <i id="heartbeat" class='fas fa-heartbeat'></i>
@@ -38,8 +43,10 @@
     } else {
         // 休息时间
         content = `
-            <img class='boardsign' src='https://sourcebucket.s3.ladydaily.com/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'>
-            <br>
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
+                <img class='boardsign' src='https://s1.aigei.com/src/img/png/dc/dc8ebbd3dd0345d7be3b211a676ebdf5.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OvNY-3WP9YXq7WBOirVBihb8cqA=' style='height: 20px; margin-right: 8px;'>
+                <span style="font-size:13px; font-weight:bold; color: var(--text-highlight-color);">下班了就该开开心心地玩耍~</span>
+            </div>
             <div style="font-size:13px;font-weight:bold">
                 本站居然运行了 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒 
                 <i id="heartbeat" class='fas fa-heartbeat'></i>
