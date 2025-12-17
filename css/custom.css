@@ -1,3 +1,83 @@
+/* 自定义字体引入 */
+@font-face {
+  /* 为载入的字体取名字 */
+  font-family: 'ZihunBaiGeTianXing';  
+  /* 字体文件地址 */
+  src: url(/font/字魂白鸽天行体.ttf);
+  /* 定义加粗样式 */
+  font-weight: 200;
+  /* 定义字体样式 */
+  font-style: normal;
+  /* 定义显示样式 */
+  font-display: block;
+}
+
+/* 调整全局字体粗细 */
+body {
+  font-weight: 300 !important;
+}
+
+/* 调整标题字体粗细 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400 !important;
+}
+
+/* 调整网站标题字体粗细 */
+#site-name, #site-title {
+  font-weight: 400 !important;
+}
+
+/* 调整导航链接字体粗细 */
+#nav .menus_items .menus_item a {
+  font-weight: 300 !important;
+}
+
+/* 放大blog-info容器 */
+#nav #blog-info {
+  font-size: 1.2em !important;
+}
+
+/* 放大网站图标 */
+#nav #blog-info .site-icon {
+  height: 42px !important;
+  width: 42px !important;
+  margin-right: 10px !important;
+}
+
+/* 放大导航栏网站名称 */
+#nav .site-name {
+  font-size: 1.3em !important;
+}
+
+/* 放大首页标题 */
+#site-title {
+  font-size: 2.2em !important;
+}
+
+@media screen and (min-width: 768px) {
+  #site-title {
+    font-size: 3.2em !important;
+  }
+  #site-subtitle {
+    font-size: 1.3em !important;
+  }
+}
+
+/* 放大导航菜单项目 */
+#nav .menus_items .menus_item {
+  font-size: 16px !important;
+}
+
+/* 放大导航菜单链接 */
+#nav .menus_items .menus_item a {
+  font-size: 16px !important;
+}
+
+/* 放大下拉菜单项目 */
+#nav .menus_items .menus_item .menus_item_child li a {
+  font-size: 15px !important;
+}
+
 /* 页脚与头图透明 */
 #footer {
     background: transparent !important;
@@ -43,4 +123,133 @@
 [data-theme="dark"] .magnet_item:hover {
     background: #3ecdf1;
     color: #f2f2f2;
+}
+/* 一级菜单居中优化 */
+#nav {
+  /* 调整导航栏整体高度，保持默认行高以维持垂直居中 */
+  height: 60px;
+}
+
+#nav .menus_items {
+  /* 一级菜单居中 */
+  position: absolute;
+  width: max-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nav .menus_items .menus_item {
+  /* 调整菜单项间距和字体大小 */
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  min-width: 200px;
+}
+
+/* 调整子菜单项样式 */
+#nav .menus_items .menus_item .menus_item_child li {
+  /* 子菜单项间距和字体大小 */
+  padding: 8px 12px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* 简化子菜单定位，使用统一的居中定位 */
+#nav .menus_items .menus_item .menus_item_child {
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+/* 简约霓虹灯效果 - 只在夜间模式生效 */
+
+/* 定义霓虹灯主题变量 */
+[data-theme="dark"] {
+  --neon-color-1: var(--theme-color);
+  --neon-color-2: rgba(73, 177, 245, 0.8);
+  --neon-color-3: rgba(0, 196, 182, 0.8);
+}
+
+/* 简约霓虹灯动画 - 只使用主题相关颜色 */
+@keyframes simple-neon {
+  0%, 100% { text-shadow: var(--neon-color-1) 0 0 6px, rgba(255, 255, 255, 0.3) 0 0 10px; }
+  50% { text-shadow: var(--neon-color-2) 0 0 8px, rgba(255, 255, 255, 0.4) 0 0 12px; }
+}
+
+/* 夜间模式下应用简约霓虹灯效果 */
+[data-theme="dark"] #site-name,
+[data-theme="dark"] #site-title,
+[data-theme="dark"] #site-subtitle {
+  animation: simple-neon 4s ease-in-out infinite;
+}
+
+/* 夜间模式导航链接发光效果 */
+[data-theme="dark"] #nav .menus_items .menus_item a {
+  text-shadow: rgba(255, 255, 255, 0.2) 0 0 4px;
+  transition: all 0.3s ease;
+}
+
+/* 夜间模式导航链接hover效果增强 */
+[data-theme="dark"] #nav .menus_items .menus_item a:hover {
+  text-shadow: var(--neon-color-1) 0 0 8px, rgba(255, 255, 255, 0.4) 0 0 12px;
+  transition: all 0.3s ease;
+}
+
+/* 浅色模式下保持正常显示 */
+[data-theme="light"] #site-name,
+[data-theme="light"] #site-title {
+  animation: none;
+  text-shadow: none;
+}
+/* 侧边栏个人信息卡片动态渐变色 */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 50% 0%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* 侧边栏个人信息卡片动态渐变色 */
+#aside-content>.card-widget.card-info {
+    background: linear-gradient(-45deg, #fefefe 0%, #89c1cc 25%, #acdce6 50%, #a0d8f6 75%, #a3c8f8 100%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    transition: all 0.3s ease;
+}
+
+#aside-content>.card-widget.card-info:hover {
+    background-size: 500% 500%;
+    animation-duration: 15s;
+}
+
+[data-theme=dark] #aside-content>.card-widget.card-info {
+    background: linear-gradient(-45deg, #fefefe 0%, #89c1cc 25%, #acdce6 50%, #a0d8f6 75%, #a3c8f8 100%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+}
+
+[data-theme=dark] #aside-content>.card-widget.card-info:hover {
+    background-size: 500% 500%;
+    animation-duration: 15s;
 }
