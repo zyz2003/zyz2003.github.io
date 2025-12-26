@@ -88,7 +88,10 @@ h1, h2, h3, h4, h5, h6 {
 #nav .menus_items > .menus_item > a:hover,
 #nav .menus_items > .menus_item > span.site-page.group:hover {
   background: linear-gradient(45deg, #10b981 0%, #8b5cf6 100%);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
   border-radius: 3px;
   padding: 5px 12px;
 }
