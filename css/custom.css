@@ -69,40 +69,43 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 4px;
 }
 
-/* 调整导航菜单链接 */
-#nav .menus_items .menus_item a {
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-  padding: 5px 10px !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.3s ease !important;
+/* 主菜单样式优化 - 只应用于直接子元素 */
+#nav .menus_items > .menus_item > a,
+#nav .menus_items > .menus_item > span.site-page.group {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 10px;
+  background: linear-gradient(45deg, #2563eb 0%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: none;
+  transition: all 0.3s ease;
 }
 
-/* 导航链接悬停效果 */
-#nav .menus_items .menus_item a:hover {
-  color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-radius: 3px !important;
-  padding: 5px 12px !important;
+/* 主菜单悬停效果 */
+#nav .menus_items > .menus_item > a:hover,
+#nav .menus_items > .menus_item > span.site-page.group:hover {
+  background: linear-gradient(45deg, #10b981 0%, #8b5cf6 100%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 5px 12px;
 }
 
-/* 导航栏组标题样式 */
-#nav .menus_items .menus_item span.site-page.group {
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-  padding: 5px 10px !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.3s ease !important;
+/* 子菜单样式重置 - 移除渐变效果 */
+#nav .menus_items .menus_item .menus_item_child li a {
+  background: transparent;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #333;
+  background-clip: unset;
+  text-fill-color: #333;
 }
 
-/* 导航栏组标题悬停效果 */
-#nav .menus_items .menus_item span.site-page.group:hover {
-  color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-radius: 3px !important;
-  padding: 5px 12px !important;
+/* 子菜单悬停文字颜色 */
+#nav .menus_items .menus_item .menus_item_child li:hover a {
+  -webkit-text-fill-color: #fff;
+  text-fill-color: #fff;
 }
 
 /* 子菜单栏样式 */
@@ -174,6 +177,21 @@ h1, h2, h3, h4, h5, h6 {
 #nav a:hover svg.icon,
 #nav span.site-page.group:hover svg.icon {
   fill: #ffffff !important;
+}
+
+/* 社交图标中的SVG图标样式 */
+.social-icon svg.icon {
+  width: 1.1em !important;
+  height: 1.1em !important;
+  vertical-align: middle !important;
+  fill: currentColor !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  top: -2.5px !important;
+}
+
+.social-icon:hover svg.icon {
+  transform: rotate(360deg) !important;
 }
 
 /* 页脚与头图透明 */

@@ -1769,6 +1769,21 @@ input::placeholder {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-transition: background-image 1s ease-in-out;
+  -moz-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  -ms-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+:root {
+  --day-bg: url("https://free.picui.cn/free/2025/12/26/694e3a7bdd397.jpg");
+  --night-bg: url("https://free.picui.cn/free/2025/12/16/6940bcac2479e.jpg");
+}
+[data-theme="light"] #web_bg {
+  background-image: var(--day-bg);
+}
+[data-theme="dark"] #web_bg {
+  background-image: var(--night-bg);
 }
 h1,
 h2,
