@@ -7701,9 +7701,9 @@ blockquote.pullquote.right {
   --tab-button-color: rgba(255,255,255,0.7);
   --tab-button-hover-bg: #383838;
   --tab-button-active-bg: #121212;
-  --card-bg: #121212;
-  --sidebar-bg: #121212;
-  --sidebar-menu-bg: #1f1f1f;
+  --card-bg: rgba(18,18,18,0.8);
+  --sidebar-bg: rgba(18,18,18,0.8);
+  --sidebar-menu-bg: rgba(24,24,24,0.8);
   --btn-hover-color: #787878;
   --btn-color: rgba(255,255,255,0.7);
   --btn-bg: #1f1f1f;
