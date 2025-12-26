@@ -63,19 +63,117 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* 放大导航菜单项目 */
+/* 调整导航菜单项目 */
 #nav .menus_items .menus_item {
   font-size: 16px !important;
+  margin: 0 4px;
 }
 
-/* 放大导航菜单链接 */
+/* 调整导航菜单链接 */
 #nav .menus_items .menus_item a {
   font-size: 16px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 5px 10px !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
 }
 
-/* 放大下拉菜单项目 */
+/* 导航链接悬停效果 */
+#nav .menus_items .menus_item a:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 3px !important;
+  padding: 5px 12px !important;
+}
+
+/* 导航栏组标题样式 */
+#nav .menus_items .menus_item span.site-page.group {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 5px 10px !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 导航栏组标题悬停效果 */
+#nav .menus_items .menus_item span.site-page.group:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 3px !important;
+  padding: 5px 12px !important;
+}
+
+/* 子菜单栏样式 */
+#nav .menus_items .menus_item .menus_item_child {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: calc(100% + 3px) !important;
+  margin-top: 0 !important;
+  padding: 3px 0 !important;
+  width: max-content !important;
+  min-width: 120px !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  z-index: 1000 !important;
+}
+
+/* 子菜单项目样式 */
+#nav .menus_items .menus_item .menus_item_child li {
+  border-radius: 6px !important;
+  margin: 2px 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+/* 子菜单项目悬停效果 */
+#nav .menus_items .menus_item .menus_item_child li:hover {
+  background-color: var(--default-bg-color) !important;
+  border-radius: 6px !important;
+}
+
+/* 子菜单链接样式 */
 #nav .menus_items .menus_item .menus_item_child li a {
-  font-size: 15px !important;
+  font-size: 12px !important;
+  color: #333 !important;
+  padding: 4px 10px !important;
+  line-height: 1.4 !important;
+  display: block !important;
+  transition: all 0.2s ease !important;
+  border-radius: 6px !important;
+}
+
+/* 子菜单链接悬停效果 */
+#nav .menus_items .menus_item .menus_item_child li:hover a {
+  color: #fff !important;
+  border-radius: 6px !important;
+}
+
+/* 调整导航栏高度 */
+#nav {
+  height: 60px !important;
+  line-height: 60px !important;
+}
+
+/* 调整导航栏图标大小 */
+#nav .fa-fw {
+  font-size: 16px !important;
+  margin-right: 6px !important;
+}
+
+/* SVG图标样式调整 */
+#nav svg.icon {
+  width: 1.4em !important;
+  height: 1.4em !important;
+  fill: rgba(255, 255, 255, 0.9) !important;
+  vertical-align: middle !important;
+}
+
+#nav a:hover svg.icon,
+#nav span.site-page.group:hover svg.icon {
+  fill: #ffffff !important;
 }
 
 /* 页脚与头图透明 */
