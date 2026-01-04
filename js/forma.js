@@ -189,10 +189,135 @@
       });
     }
     
+    // 添加分享功能到版权容器 - 独立实现
+    function initCopyrightShare() {
+      // 等待DOM加载完成
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCopyrightShare);
+        return;
+      }
+      
+      // 查找所有分享按钮
+      const shareBtns = document.querySelectorAll('.post-copyright .share-btn');
+      
+      // 获取当前页面信息
+      const url = window.location.href;
+      const title = document.title;
+      
+      // 为每个微信分享按钮添加悬浮事件
+      shareBtns.forEach(btn => {
+        // 检查是哪个分享按钮
+        const hasWeixin = btn.querySelector('.fab.fa-weixin');
+        const hasWeibo = btn.querySelector('.fab.fa-weibo');
+        
+        if (hasWeixin) {
+          // 确保按钮是相对定位
+          btn.style.position = 'relative';
+          
+          // 创建二维码容器
+          let qrContainer = null;
+          
+          // 监听鼠标进入事件
+          btn.addEventListener('mouseenter', (e) => {
+            // 如果二维码容器已存在，直接显示
+            if (qrContainer) {
+              qrContainer.style.display = 'block';
+              return;
+            }
+            
+            // 创建二维码容器
+            qrContainer = document.createElement('div');
+            qrContainer.className = 'wechat-qr-container';
+            qrContainer.style.cssText = `
+              position: absolute;
+              left: 50%;
+              bottom: calc(100% + 5px);
+              transform: translateX(-50%);
+              z-index: 9999;
+              margin-bottom: 8px;
+              padding: 10px;
+              background: #fff;
+              border-radius: 6px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              text-align: center;
+              display: block;
+              border: 1px solid #ebeef5;
+            `;
+            
+            // 创建二维码标题
+            const qrTitle = document.createElement('div');
+            qrTitle.textContent = '微信扫一扫';
+            qrTitle.style.cssText = `
+              font-size: 13px;
+              color: #606266;
+              margin-bottom: 10px;
+              font-weight: normal;
+            `;
+            qrContainer.appendChild(qrTitle);
+            
+            // 创建二维码图片
+            const qrImg = document.createElement('img');
+            qrImg.alt = '微信分享二维码';
+            qrImg.style.cssText = `
+              width: 130px;
+              height: 130px;
+              display: block;
+              margin: 0 auto 8px;
+              background: #fff;
+              padding: 4px;
+              border: 1px solid #ebeef5;
+              border-radius: 4px;
+            `;
+            
+            // 使用更可靠的二维码生成API，与sharejs保持一致
+            const wxShareUrl = encodeURIComponent(url);
+            const wxQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${wxShareUrl}`;
+            
+            // 设置二维码图片
+            qrImg.src = wxQrUrl;
+            qrContainer.appendChild(qrImg);
+            
+            // 添加分享提示文字
+            const qrTip = document.createElement('div');
+            qrTip.textContent = '扫码分享到微信';
+            qrTip.style.cssText = `
+              font-size: 12px;
+              color: #909399;
+              text-align: center;
+            `;
+            qrContainer.appendChild(qrTip);
+            
+            // 添加到按钮中
+            btn.appendChild(qrContainer);
+          });
+          
+          // 监听鼠标离开事件
+          btn.addEventListener('mouseleave', (e) => {
+            // 隐藏二维码容器
+            if (qrContainer) {
+              qrContainer.style.display = 'none';
+            }
+          });
+        } else if (hasWeibo) {
+          // 微博分享 - 跳转到微博分享页面
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const weiboUrl = `http://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+            window.open(weiboUrl, '_blank', 'width=600,height=400');
+            showNotification('正在打开微博分享...');
+          });
+        }
+      });
+    }
+    
     // 初始化通知功能
     initCodeCopy();
     // 初始化复制链接功能
     initCopyLink();
+    // 初始化版权容器分享功能
+    initCopyrightShare();
   }
   
   // ===========================
