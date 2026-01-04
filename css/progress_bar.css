@@ -1,0 +1,103 @@
+/* 渐变色进度条样式 */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  z-index: 2000;
+  position: fixed;
+  height: 3px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5), 0 0 5px rgba(102, 126, 234, 0.3);
+  transition: transform 0.3s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.8), 0 0 5px rgba(102, 126, 234, 0.6);
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* 发光效果 */
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 3px;
+  background: #667eea;
+  animation: pace-activity 1s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.8), 0 0 5px rgba(102, 126, 234, 0.6);
+}
+
+@keyframes pace-activity {
+  0% {
+    right: 0;
+    width: 10%;
+  }
+  50% {
+    right: 50%;
+    width: 50%;
+  }
+  100% {
+    right: 100%;
+    width: 10%;
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .pace .pace-progress {
+    height: 2px;
+  }
+  
+  .pace .pace-activity {
+    height: 2px;
+  }
+}
+
+/* 夜间模式适配 */
+[data-theme="dark"] .pace .pace-progress {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.5), 0 0 5px rgba(79, 172, 254, 0.3);
+}
+
+[data-theme="dark"] .pace .pace-activity {
+  background: #4facfe;
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.8), 0 0 5px rgba(79, 172, 254, 0.6);
+}
+
+/* 完成动画 */
+.pace-done .pace-progress {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}

@@ -1,0 +1,60 @@
+/* 表情包放大容器样式 */
+#owo-big {
+    /* 基础定位与布局 */
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+    /* 视觉样式 */
+    background-color: rgba(255, 255, 255, 0.95); /* 半透明背景，提升层次感 */
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* 添加阴影，增强立体感 */
+    
+    /* 其他属性 */
+    z-index: 9999;
+    overflow: hidden;
+    transform: translate(0, -105%);
+    transition: all 0.2s ease;
+    
+    /* 动画效果 */
+    animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);
+    pointer-events: none; /* 避免遮挡其他元素 */
+}
+
+/* 夜间模式适配 */
+[data-theme="dark"] #owo-big {
+    background-color: rgba(74, 74, 74, 0.95);
+    border-color: #666;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* 放大容器内图片样式 */
+#owo-big img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 保持图片比例，避免变形 */
+    display: block;
+}
+
+/* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */
+@keyframes owoIn {
+    0% {
+        transform: translate(0, -95%) scale(0.9); /* 添加缩放效果，增强动画感 */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, -105%) scale(1); /* 添加缩放效果，增强动画感 */
+        /* 通过 opacity 实现淡入，会触发 Composite，留意性能 */
+        opacity: 1;
+    }
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    #owo-big {
+        border-radius: 8px; /* 移动端减小圆角 */
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* 移动端减小阴影 */
+    }
+}

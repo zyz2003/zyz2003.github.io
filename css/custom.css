@@ -372,3 +372,179 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 500% 500%;
     animation-duration: 15s;
 }
+
+/* 评论输入框提示样式 */
+/* 适配Twikoo评论系统 */
+.twikoo .el-input-group__prepend {
+  position: relative;
+}
+
+/* 设置文字内容 */
+.twikoo .el-input-group:nth-child(1):before {
+    content: '输入QQ号会自动获取昵称和头像🐧';
+}
+
+.twikoo .el-input-group:nth-child(2):before {
+    content: '收到回复将会发送到您的邮箱📧';
+}
+
+.twikoo .el-input-group:nth-child(3):before {
+    content: '可以通过昵称访问您的网站🔗';
+}
+
+/* 当用户点击输入框时显示 */
+.twikoo .el-input-group:focus-within::before,
+.twikoo .el-input-group:focus-within::after {
+    display: block;
+}
+
+/* 主内容区 */
+.twikoo .el-input-group::before {
+    /* 先隐藏起来 */
+    display: none;
+    /* 绝对定位 */
+    position: absolute;
+    /* 向上移动60像素 */
+    top: -60px;
+    /* 文字强制不换行，防止left:50%导致的文字换行 */
+    white-space: nowrap;
+    /* 圆角 */
+    border-radius: 10px;
+    /* 距离左边50% */
+    left: 50%;
+    /* 然后再向左边挪动自身的一半，即可实现居中 */
+    transform: translate(-50%);
+    /* 填充 */
+    padding: 14px 18px;
+    background: #444;
+    color: #fff;
+    z-index: 1000;
+}
+
+/* 小角标 */
+.twikoo .el-input-group::after {
+    display: none;
+    content: '';
+    position: absolute;
+    /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
+    我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
+    border: 12px solid transparent;
+    border-top-color: #444;
+    left: 50%;
+    transform: translate(-50%, -48px);
+    z-index: 1000;
+}
+
+/* 夜间模式适配 */
+[data-theme="dark"] .twikoo .el-input-group::before {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+[data-theme="dark"] .twikoo .el-input-group::after {
+    border-top-color: #2d2d2d;
+}
+
+/* ===========================
+   Snackbar 样式优化
+   =========================== */
+.snackbar-container.snackbar-css {
+    /* 现代圆角设计 */
+    border-radius: 12px !important;
+    /* 提升不透明度 */
+    opacity: 1 !important;
+    /* 更高级的阴影效果 */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+    /* 字体优化 */
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    /* 内边距调整 */
+    padding: 14px 20px !important;
+    /* 平滑过渡动画 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    /* 确保文字颜色正常显示 */
+    color: #ffffff !important;
+    /* 通用居中显示 */
+    text-align: center !important;
+}
+
+/* 浅色模式样式优化 - 蓝色渐变背景 */
+[data-theme="light"] .snackbar-container.snackbar-css {
+    /* 蓝色渐变色背景 - 通用样式 */
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    /* 白色文字 */
+    color: #ffffff !important;
+    /* 移除边框 */
+    border: none !important;
+}
+
+/* 深色模式样式优化 - 蓝色渐变背景 */
+[data-theme="dark"] .snackbar-container.snackbar-css {
+    /* 深色蓝色渐变背景 - 通用样式 */
+    background: linear-gradient(135deg, #0077ff 0%, #00d4ff 100%) !important;
+    /* 白色文字 */
+    color: #ffffff !important;
+    /* 移除边框 */
+    border: none !important;
+}
+
+/* Snackbar 显示动画 - 通用组合动画 */
+.snackbar-container.snackbar-css {
+    animation: snackbarAppear 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+}
+
+@keyframes snackbarAppear {
+    0% {
+        transform: translateY(-30px) scale(0.8);
+        opacity: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: translateY(5px) scale(1.05);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Snackbar 隐藏动画 */
+.snackbar-container.snackbar-css.hide {
+    animation: snackbarDisappear 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+}
+
+@keyframes snackbarDisappear {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px) scale(0.9);
+        opacity: 0;
+    }
+}
+
+/* 悬浮效果 */
+.snackbar-container.snackbar-css:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* 针对顶部显示的Snackbar优化 */
+.snackbar-container.top-left.snackbar-css,
+.snackbar-container.top-center.snackbar-css,
+.snackbar-container.top-right.snackbar-css {
+    /* 顶部边距调整 */
+    margin-top: 20px !important;
+}
+
+/* 针对底部显示的Snackbar优化 */
+.snackbar-container.bottom-left.snackbar-css,
+.snackbar-container.bottom-center.snackbar-css,
+.snackbar-container.bottom-right.snackbar-css {
+    /* 底部边距调整 */
+    margin-bottom: 20px !important;
+}
