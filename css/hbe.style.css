@@ -429,7 +429,7 @@
 	margin-top: 1.2em;
 	width: 100%;
 	background: transparent;
-	color: #49b1f5 ;
+	color: #84AF9B ;
 	font-size: 1.55em;
 }
 
@@ -442,7 +442,7 @@
 	text-align: left;
 	padding: 0em;
 	letter-spacing: 1px;
-	color: #49b1f5 ;
+	color: #84AF9B ;
 	pointer-events: none;
 	-webkit-transform-origin: 0 0;
 	transform-origin: 0 0;
@@ -453,7 +453,7 @@
 }
 
 .hbe-graphic-xray {
-	stroke: #49b1f5 ;
+	stroke: #84AF9B ;
 	pointer-events: none;
 	stroke-width: 2px;
 	top: 1.25em;
@@ -467,14 +467,14 @@
 
 .hbe-input-field-xray:focus + .hbe-input-label-xray,
 .input--filled .hbe-input-label-xray {
-	color: #49b1f5 ;
+	color: #84AF9B ;
 	-webkit-transform: translate3d(0, 3.5em, 0) scale3d(0.85, 0.85, 1);
 	transform: translate3d(0, 3.5em, 0) scale3d(0.85, 0.85, 1);
 }
 
 .hbe-input-field-xray:focus ~ .hbe-graphic-xray,
 .input--filled .graphic-xray {
-	stroke: #49b1f5 ;
+	stroke: #84AF9B ;
 	-webkit-transform: translate3d(-66.6%, 0, 0);
 	transform: translate3d(-66.6%, 0, 0);
 }
