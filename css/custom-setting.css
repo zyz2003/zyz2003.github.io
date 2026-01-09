@@ -1,0 +1,409 @@
+/* 自定义样式设置按钮 */
+#custom-setting-button {
+  display: inline;
+  padding: 0 0 0 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+#custom-setting-button:hover {
+  color: #4f46e5;
+  transform: scale(1.1);
+}
+
+/* 模态窗口样式 */
+#custom-setting-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#custom-setting-modal.show {
+  display: block;
+  opacity: 1;
+}
+
+#custom-setting-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  transition: backdrop-filter 0.3s ease;
+}
+
+.custom-setting-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 700px;
+  max-width: 95%;
+  max-height: 80vh;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Helvetica Neue', sans-serif;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-setting-modal.show .custom-setting-dialog {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+  .custom-setting-dialog {
+    width: 95%;
+    margin: 10px;
+    max-height: 90vh;
+  }
+}
+
+.custom-setting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  color: white;
+  height: 52px;
+}
+
+.custom-setting-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-setting-header .close-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-setting-header .close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.custom-setting-content {
+  padding: 24px;
+  overflow-y: auto;
+  max-height: calc(80vh - 52px);
+  background: #f9fafb;
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .custom-setting-content {
+    padding: 16px;
+    max-height: calc(90vh - 52px);
+  }
+}
+
+/* 恢复默认设置按钮 */
+.reset-default-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto 24px;
+  padding: 12px 28px;
+  width: 100%;
+  max-width: 300px;
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Helvetica Neue', sans-serif;
+}
+
+.reset-default-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+  background: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
+}
+
+/* 章节标题 */
+.setting-section {
+  margin-bottom: 28px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.setting-section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1f2937;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.setting-section-title i {
+  margin-right: 10px;
+  color: #4f46e5;
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+
+/* 设置项 */
+.setting-item {
+  margin-bottom: 20px;
+}
+
+.setting-item:last-child {
+  margin-bottom: 0;
+}
+
+.setting-item-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.setting-item-value {
+  font-weight: 600;
+  color: #4f46e5;
+  margin-left: 6px;
+}
+
+/* 滑块样式 */
+.custom-slider {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e5e7eb;
+  border-radius: 4px;
+  outline: none;
+  margin: 12px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-slider:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--slider-value, 95%);
+  background: linear-gradient(to right, #4f46e5 0%, #4338ca 100%);
+  border-radius: 4px;
+  transition: width 0.1s ease;
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 3px solid #4f46e5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  border-color: #4338ca;
+}
+
+.custom-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 3px solid #4f46e5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.custom-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  border-color: #4338ca;
+}
+
+/* 开关样式 */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e5e7eb;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 15px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:checked + .toggle-slider {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+input:focus + .toggle-slider {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
+}
+
+/* 开关组 */
+.toggle-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .toggle-group {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.toggle-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #6b7280;
+  padding: 8px 0;
+}
+
+/* 提示框 */
+.notice-box {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #4f46e5;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.notice-box i {
+  margin-right: 8px;
+  color: #4f46e5;
+}
+
+/* 滚动条样式 */
+.custom-setting-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-setting-content::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.custom-setting-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4f46e5 0%, #4338ca 100%);
+  border-radius: 4px;
+}
+
+.custom-setting-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4338ca 0%, #3730a3 100%);
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+  .setting-section {
+    padding: 16px;
+  }
+  
+  .setting-section-title {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  
+  .custom-setting-header {
+    padding: 10px 16px;
+    height: 48px;
+  }
+  
+  .custom-setting-header h3 {
+    font-size: 16px;
+  }
+  
+  .custom-setting-content {
+    padding: 16px;
+  }
+}
