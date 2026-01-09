@@ -243,6 +243,29 @@ h1, h2, h3, h4, h5, h6 {
     background: #3ecdf1;
     color: #f2f2f2;
 }
+
+/* 自定义高亮文本样式 */
+mark {
+    /* 使用偏浅蓝色的渐变色 */
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    /* 文字颜色设为深色，确保清晰可见 */
+    color: #333;
+    /* 移除默认的背景色 */
+    background-color: transparent;
+    /* 添加圆角效果 */
+    border-radius: 4px;
+    /* 添加内边距 */
+    padding: 0.2em 0.4em;
+    /* 简化样式，移除过渡效果 */
+}
+
+/* 深色模式下的高亮样式 */
+[data-theme="dark"] mark {
+    /* 深色模式下使用柔和的浅蓝色渐变 */
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    /* 深色模式下文字颜色设为白色 */
+    color: white;
+}
 /* 一级菜单居中优化 */
 #nav {
   /* 调整导航栏整体高度，保持默认行高以维持垂直居中 */
