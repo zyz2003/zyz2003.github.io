@@ -9,7 +9,10 @@
     background_day: 'https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/images/95B6A6A6E163D50B92295B6E65E609F5.JPG',
     background_night: 'https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/images/9A60B95081CBBEC139E6B556005C5604.jpg',
     card_opacity: 0.6,
-    enable_canvas_nest: true
+    enable_canvas_nest: true,
+    global_font: 'ZihunBaiGeTianXing, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+    code_font: 'consolas, ZihunBaiGeTianXing, "Microsoft YaHei", "WenQuanYi Micro Hei"',
+    blog_title_font: 'ZihunBaiGeTianXing, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
   };
   
   // 从GLOBAL_CONFIG获取配置，覆盖默认值
@@ -50,6 +53,21 @@
                   文章背景透明度 (0%-100%): <span class="setting-item-value">${Math.round(defaultConfig.card_opacity * 100)}%</span>
                 </div>
                 <input type="range" class="custom-slider" min="0" max="100" value="${Math.round(defaultConfig.card_opacity * 100)}" data-setting="card_opacity">
+              </div>
+              
+              <div class="setting-item">
+                <div class="setting-item-label">
+                  全局字体选择: <span class="setting-item-value font-name">${defaultConfig.global_font.split(',')[0].trim()}</span>
+                </div>
+                <select class="font-select" data-setting="global_font">
+                  <option value="ZihunBaiGeTianXing, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"" ${defaultConfig.global_font.includes('ZihunBaiGeTianXing') ? 'selected' : ''}>紫魂白鸽天行</option>
+                  <option value="-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"" ${defaultConfig.global_font.includes('-apple-system') && !defaultConfig.global_font.includes('ZihunBaiGeTianXing') ? 'selected' : ''}>系统默认</option>
+                  <option value="'Microsoft YaHei', sans-serif" ${defaultConfig.global_font.includes('Microsoft YaHei') ? 'selected' : ''}>微软雅黑</option>
+                  <option value="'WenQuanYi Micro Hei', sans-serif" ${defaultConfig.global_font.includes('WenQuanYi Micro Hei') ? 'selected' : ''}>文泉驿微米黑</option>
+                  <option value="'SimSun', serif" ${defaultConfig.global_font.includes('SimSun') ? 'selected' : ''}>宋体</option>
+                  <option value="'SimHei', sans-serif" ${defaultConfig.global_font.includes('SimHei') ? 'selected' : ''}>黑体</option>
+                  <option value="'KaiTi', serif" ${defaultConfig.global_font.includes('KaiTi') ? 'selected' : ''}>楷体</option>
+                </select>
               </div>
               
               <div class="toggle-group">
@@ -103,6 +121,9 @@
     // 绑定开关事件
     bindToggleEvents();
     
+    // 绑定字体选择器事件
+    bindFontSelectorEvents();
+    
     // 绑定恢复默认按钮事件
     bindResetButtonEvent();
     
@@ -114,6 +135,9 @@
   function initSettings() {
     // 应用文章背景透明度
     applyCardOpacity(defaultConfig.card_opacity);
+    
+    // 应用默认字体设置
+    applyGlobalFont(defaultConfig.global_font);
   }
 
   // 绑定滑块事件
@@ -127,6 +151,17 @@
       slider.addEventListener('input', () => {
         updateSliderValue(slider);
         applySetting(slider);
+      });
+    });
+  }
+  
+  // 绑定字体选择器事件
+  function bindFontSelectorEvents() {
+    const fontSelectors = document.querySelectorAll('.font-select');
+    fontSelectors.forEach((selector) => {
+      // 绑定change事件
+      selector.addEventListener('change', () => {
+        applySetting(selector);
       });
     });
   }
@@ -185,7 +220,56 @@
       } else if (settingName === 'enable_sidebar') {
         toggleSidebar(value);
       }
+    } else if (element.tagName === 'SELECT') {
+      // 字体选择器
+      const value = element.value;
+      
+      if (settingName === 'global_font') {
+        applyGlobalFont(value);
+      }
     }
+  }
+  
+  // 应用全局字体
+  function applyGlobalFont(fontFamily) {
+    // 保存到localStorage，下次加载时使用
+    localStorage.setItem('custom_global_font', fontFamily);
+    
+    // 使用更强制的方式应用字体，确保覆盖CSS中的!important规则
+    // 1. 创建一个style元素，添加到head中，优先级更高
+    let styleElement = document.getElementById('custom-font-style');
+    if (!styleElement) {
+      styleElement = document.createElement('style');
+      styleElement.id = 'custom-font-style';
+      document.head.appendChild(styleElement);
+    }
+    
+    // 使用!important确保字体样式能够覆盖其他CSS规则
+    styleElement.textContent = `
+      /* 全局字体样式 - 使用!important确保优先级 */
+      html, body, article, .article-content, .post-content, .recent-post-item, 
+      h1, h2, h3, h4, h5, h6, #site-name, #site-title, #site-subtitle, 
+      .menus_items, .menus_item, .menus_item a, 
+      .card-widget, .card-info, .card-archives, .card-categories, .card-tags, 
+      .post-meta, .post-title, .post-content, .comment-content, .footer-content {
+        font-family: ${fontFamily} !important;
+      }
+    `;
+    
+    // 更新默认配置
+    defaultConfig.global_font = fontFamily;
+    
+    // 提取主要字体名称（第一个字体）
+    const mainFontName = fontFamily.split(',')[0].trim().replace(/['"]/g, '');
+    
+    // 更新设置面板中的显示值
+    const fontNameElement = document.querySelector('.font-name');
+    if (fontNameElement) {
+      fontNameElement.textContent = mainFontName;
+    }
+    
+    // 简化日志，只显示主要字体名称
+    console.log(`全局字体已设置为: ${mainFontName}`);
   }
 
   // 应用文章背景透明度
@@ -338,6 +422,33 @@
       }
     });
     
+    // 重置字体选择器
+    const fontSelectors = document.querySelectorAll('.font-select');
+    fontSelectors.forEach((selector) => {
+      const settingName = selector.dataset.setting;
+      
+      // 从GLOBAL_CONFIG重新获取原始默认配置，确保恢复到最开始的设置
+      let originalDefaultValue;
+      
+      // 优先使用GLOBAL_CONFIG中的配置
+      if (typeof GLOBAL_CONFIG !== 'undefined' && GLOBAL_CONFIG.customSetting && GLOBAL_CONFIG.customSetting.default) {
+        originalDefaultValue = GLOBAL_CONFIG.customSetting.default[settingName];
+      } else {
+        // 如果GLOBAL_CONFIG不可用，使用代码中定义的默认值
+        originalDefaultValue = defaultConfig[settingName];
+      }
+      
+      // 设置选择器值
+      selector.value = originalDefaultValue;
+      
+      // 应用默认字体
+      if (settingName === 'global_font') {
+        applyGlobalFont(originalDefaultValue);
+      }
+      
+      console.log(`已将${settingName}重置为默认值: ${originalDefaultValue}`);
+    });
+    
     // 重置开关
     const toggles = document.querySelectorAll('.toggle-switch input');
     toggles.forEach((toggle) => {
@@ -411,6 +522,14 @@
       const enable = savedSidebar === 'true' || savedSidebar === 'show';
       // 更新默认配置
       defaultConfig.enable_sidebar = enable;
+    }
+    
+    // 加载全局字体设置
+    const savedFont = localStorage.getItem('custom_global_font');
+    if (savedFont) {
+      applyGlobalFont(savedFont);
+      // 更新默认配置
+      defaultConfig.global_font = savedFont;
     }
   }
 
