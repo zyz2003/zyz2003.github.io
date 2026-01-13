@@ -200,14 +200,14 @@
 
   
   <url>
-    <loc>http://zyz2003.github.io/tags/AI%E5%BA%94%E7%94%A8/</loc>
+    <loc>http://zyz2003.github.io/tags/Java/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://zyz2003.github.io/tags/Java/</loc>
+    <loc>http://zyz2003.github.io/tags/AI%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -235,7 +235,14 @@
   </url>
   
   <url>
-    <loc>http://zyz2003.github.io/tags/Python/</loc>
+    <loc>http://zyz2003.github.io/tags/Markdown/</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://zyz2003.github.io/tags/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -256,14 +263,7 @@
   </url>
   
   <url>
-    <loc>http://zyz2003.github.io/tags/Markdown/</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://zyz2003.github.io/tags/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
+    <loc>http://zyz2003.github.io/tags/Python/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -272,14 +272,14 @@
 
   
   <url>
-    <loc>http://zyz2003.github.io/categories/AI%E5%BA%94%E7%94%A8/</loc>
+    <loc>http://zyz2003.github.io/categories/Java/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://zyz2003.github.io/categories/Java/</loc>
+    <loc>http://zyz2003.github.io/categories/AI%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -307,14 +307,14 @@
   </url>
   
   <url>
-    <loc>http://zyz2003.github.io/categories/Python/</loc>
+    <loc>http://zyz2003.github.io/categories/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://zyz2003.github.io/categories/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
+    <loc>http://zyz2003.github.io/categories/Python/</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
