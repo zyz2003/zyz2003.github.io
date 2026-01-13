@@ -277,25 +277,49 @@
     // 保存到localStorage，下次加载时使用
     localStorage.setItem('custom_card_opacity', opacity);
     
-    // 计算实际的RGBA值
-    const rgbaValue = `rgba(255, 255, 255, ${opacity})`;
+    // 获取当前主题模式
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    
+    // 根据主题模式计算实际的RGBA值
+    // 白天模式使用白色背景，夜晚模式使用深色背景
+    const backgroundColor = currentTheme === 'dark' 
+      ? `rgba(31, 31, 31, ${opacity})`  // 夜晚模式使用深灰色背景
+      : `rgba(255, 255, 255, ${opacity})`;  // 白天模式使用白色背景
     
     // 应用到首页文章卡片
     const recentPosts = document.querySelectorAll('.recent-post-item');
     recentPosts.forEach(post => {
       // 对于使用CSS变量的主题
-      post.style.setProperty('--recent-post-bgcolor', rgbaValue);
+      post.style.setProperty('--recent-post-bgcolor', backgroundColor);
       // 对于直接设置背景的情况
-      post.style.background = rgbaValue;
+      post.style.background = backgroundColor;
     });
     
     // 应用到文章详情页容器
     const postContent = document.getElementById('post');
     if (postContent) {
-      postContent.style.background = rgbaValue;
+      postContent.style.background = backgroundColor;
     }
     
-    console.log(`文章背景透明度已设置为: ${opacity}`);
+    // 应用到目录磁贴 (catalog_magnet)
+    const catalogMagnet = document.querySelector('.catalog_magnet');
+    if (catalogMagnet) {
+      catalogMagnet.style.background = backgroundColor;
+    }
+    
+    // 应用到目录容器
+    const catalog = document.querySelector('.catalog');
+    if (catalog) {
+      catalog.style.background = backgroundColor;
+    }
+    
+    // 设置magnet_link_context容器下的span标签字体颜色
+    const magnetLinkContexts = document.querySelectorAll('.magnet_link_context span');
+    magnetLinkContexts.forEach(span => {
+      span.style.color = currentTheme === 'dark' ? 'rgba(255, 255, 255, 0.7)' : '';
+    });
+    
+    console.log(`文章背景透明度已设置为: ${opacity}，当前主题: ${currentTheme}`);
   }
 
   // 切换线条背景效果
@@ -408,17 +432,42 @@
 
   // 恢复默认设置
   function resetToDefaults() {
+    // 从GLOBAL_CONFIG获取原始默认配置，确保恢复到最开始的设置
+    let originalDefaultConfig;
+    
+    // 优先使用GLOBAL_CONFIG中的配置
+    if (typeof GLOBAL_CONFIG !== 'undefined' && GLOBAL_CONFIG.customSetting && GLOBAL_CONFIG.customSetting.default) {
+      originalDefaultConfig = GLOBAL_CONFIG.customSetting.default;
+      // 确保包含enable_sidebar默认值
+      if (originalDefaultConfig.enable_sidebar === undefined) {
+        originalDefaultConfig.enable_sidebar = true;
+      }
+    } else {
+      // 如果GLOBAL_CONFIG不可用，使用代码中定义的默认值
+      originalDefaultConfig = {
+        card_opacity: 0.6,
+        enable_canvas_nest: true,
+        enable_sidebar: true, // 添加侧边栏默认值
+        global_font: 'ZihunBaiGeTianXing, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+      };
+    }
+    
     // 重置滑块
     const sliders = document.querySelectorAll('.custom-slider');
     sliders.forEach((slider) => {
       const settingName = slider.dataset.setting;
-      let defaultValue;
       
       if (settingName === 'card_opacity') {
-        defaultValue = Math.round(defaultConfig.card_opacity * 100);
+        const originalValue = originalDefaultConfig.card_opacity;
+        const defaultValue = Math.round(originalValue * 100);
         slider.value = defaultValue;
         updateSliderValue(slider);
-        applyCardOpacity(defaultConfig.card_opacity);
+        applyCardOpacity(originalValue);
+        // 从localStorage移除保存的设置
+        localStorage.removeItem('custom_card_opacity');
+        // 更新默认配置
+        defaultConfig.card_opacity = originalValue;
+        console.log(`已将${settingName}重置为默认值: ${originalValue}`);
       }
     });
     
@@ -426,17 +475,7 @@
     const fontSelectors = document.querySelectorAll('.font-select');
     fontSelectors.forEach((selector) => {
       const settingName = selector.dataset.setting;
-      
-      // 从GLOBAL_CONFIG重新获取原始默认配置，确保恢复到最开始的设置
-      let originalDefaultValue;
-      
-      // 优先使用GLOBAL_CONFIG中的配置
-      if (typeof GLOBAL_CONFIG !== 'undefined' && GLOBAL_CONFIG.customSetting && GLOBAL_CONFIG.customSetting.default) {
-        originalDefaultValue = GLOBAL_CONFIG.customSetting.default[settingName];
-      } else {
-        // 如果GLOBAL_CONFIG不可用，使用代码中定义的默认值
-        originalDefaultValue = defaultConfig[settingName];
-      }
+      const originalDefaultValue = originalDefaultConfig[settingName];
       
       // 设置选择器值
       selector.value = originalDefaultValue;
@@ -444,27 +483,35 @@
       // 应用默认字体
       if (settingName === 'global_font') {
         applyGlobalFont(originalDefaultValue);
+        // 从localStorage移除保存的设置
+        localStorage.removeItem('custom_global_font');
+        // 更新默认配置
+        defaultConfig.global_font = originalDefaultValue;
+        console.log(`已将${settingName}重置为默认值: ${originalDefaultValue}`);
       }
-      
-      console.log(`已将${settingName}重置为默认值: ${originalDefaultValue}`);
     });
     
     // 重置开关
     const toggles = document.querySelectorAll('.toggle-switch input');
     toggles.forEach((toggle) => {
       const settingName = toggle.dataset.setting;
-      let defaultChecked = true; // 默认开启
+      const originalDefaultValue = originalDefaultConfig[settingName];
       
-      // 根据设置名称获取默认值
-      if (defaultConfig.hasOwnProperty(settingName)) {
-        defaultChecked = defaultConfig[settingName];
-        toggle.checked = defaultChecked;
+      if (originalDefaultValue !== undefined) {
+        toggle.checked = originalDefaultValue;
         
         if (settingName === 'enable_canvas_nest') {
-          toggleCanvasNest(defaultChecked);
+          toggleCanvasNest(originalDefaultValue);
+          // 从localStorage移除保存的设置
+          localStorage.removeItem('custom_enable_canvas_nest');
         } else if (settingName === 'enable_sidebar') {
-          toggleSidebar(defaultChecked);
+          toggleSidebar(originalDefaultValue);
+          // 从localStorage移除保存的设置
+          localStorage.removeItem('custom_enable_sidebar');
         }
+        // 更新默认配置
+        defaultConfig[settingName] = originalDefaultValue;
+        console.log(`已将${settingName}重置为默认值: ${originalDefaultValue}`);
       }
     });
     
@@ -558,6 +605,22 @@
     
     // 从localStorage加载设置
     loadSettingsFromStorage();
+    
+    // 添加主题切换监听器，当主题改变时自动更新透明度设置
+    if (typeof window.globalFn === 'undefined') {
+      window.globalFn = {};
+    }
+    if (typeof window.globalFn.themeChange === 'undefined') {
+      window.globalFn.themeChange = {};
+    }
+    
+    // 添加主题切换回调函数
+    window.globalFn.themeChange.customSetting = function(mode) {
+      console.log(`主题已切换为: ${mode}，正在更新透明度设置...`);
+      // 重新应用透明度设置，使用当前保存的透明度值
+      const savedOpacity = localStorage.getItem('custom_card_opacity') || defaultConfig.card_opacity;
+      applyCardOpacity(parseFloat(savedOpacity));
+    };
   }
 
   // 监听DOM加载完成
