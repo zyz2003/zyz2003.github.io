@@ -321,6 +321,65 @@
   }
   
   // ===========================
+  // 4. AI摘要打字机效果
+  // ===========================
+  function initAISummaryTypewriter() {
+    // 简单直接的打字机效果实现
+    function typeWriterEffect() {
+      // 立即执行，不等待
+      const summaryElements = document.querySelectorAll('.ai-summary .ai-explanation');
+      
+      summaryElements.forEach((element, index) => {
+        // 跳过已处理的元素
+        if (element.hasAttribute('data-typed')) {
+          return;
+        }
+        
+        element.setAttribute('data-typed', 'true');
+        
+        const summaryText = element.getAttribute('data-summary');
+        if (!summaryText) return;
+        
+        // 立即清除加载文本
+        element.textContent = '';
+        
+        // 开始打字效果
+        let i = 0;
+        const typingSpeed = 50; // 打字速度（毫秒/字符）
+        
+        function type() {
+          if (i < summaryText.length) {
+            element.textContent += summaryText.charAt(i);
+            i++;
+            setTimeout(type, typingSpeed);
+          }
+        }
+        
+        // 立即开始打字
+        type();
+      });
+    }
+    
+    // 使用多种方式确保触发
+    
+    // 1. 立即执行一次，解决DOM已加载的情况
+    typeWriterEffect();
+    
+    // 2. 监听DOMContentLoaded，确保DOM加载完成
+    document.addEventListener('DOMContentLoaded', typeWriterEffect);
+    
+    // 3. 监听pjax完成事件
+    document.addEventListener('pjax:complete', typeWriterEffect);
+    
+    // 4. 使用MutationObserver，监听动态添加的摘要元素
+    const observer = new MutationObserver(typeWriterEffect);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+  
+  // ===========================
   // 初始化所有功能
   // ===========================
   function initAllFeatures() {
@@ -332,6 +391,9 @@
     
     // 初始化用户操作Snackbar通知
     initSnackbarNotifications();
+    
+    // 初始化AI摘要打字机效果
+    initAISummaryTypewriter();
   }
   
   // 页面加载完成后执行初始化
