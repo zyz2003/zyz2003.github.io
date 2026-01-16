@@ -6492,6 +6492,122 @@ figure.highlight pre .javascript .function {
   background: -ms-linear-gradient(45deg, #667eea, #764ba2);
   background: linear-gradient(45deg, #667eea, #764ba2);
 }
+@media (max-width: 768px) {
+  .music-page .music-container {
+    height: auto;
+    min-height: calc(100vh - 120px);
+    margin: 60px 0 20px;
+    padding: 0 10px;
+  }
+  .music-page .music-main-area {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  .music-page .music-list-section,
+  .music-page .music-player-section {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 100%;
+    padding: 15px;
+  }
+  .music-page .music-list-section {
+    padding: 15px;
+  }
+  .music-page .album-cover {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 0 0 150px;
+    -ms-flex: 0 0 150px;
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+  }
+  .music-page .current-song-title {
+    font-size: 20px;
+  }
+  .music-page .current-song-artist {
+    font-size: 16px;
+  }
+  .music-page .music-lyrics {
+    height: 200px !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
+    padding: 10px;
+  }
+  .music-page .control-row {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .music-page .progress-container {
+    min-width: 150px;
+    margin: 0 5px;
+  }
+  .music-page .btn-prev,
+  .music-page .btn-play-pause,
+  .music-page .btn-next,
+  .music-page .btn-toggle {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 10px;
+  }
+  .music-page .btn-play-pause {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 12px;
+  }
+  .music-page .volume-bar {
+    height: 80px;
+  }
+  .music-page .duration-display {
+    font-size: 12px;
+    min-width: 70px;
+  }
+  .music-page .music-item {
+    padding: 10px;
+    gap: 10px;
+  }
+  .music-page .music-title {
+    font-size: 14px;
+  }
+  .music-page .music-artist {
+    font-size: 12px;
+    min-width: 80px;
+  }
+  .music-page .music-list-section h2 {
+    font-size: 1.2em;
+    margin: 0 0 15px 0;
+  }
+  .music-page .lyrics-line {
+    margin: 8px 0;
+    line-height: 2;
+    font-size: 14px;
+  }
+  .music-page .player-content {
+    gap: 3px;
+    padding: 5px 0 0 0;
+  }
+}
 #pagination .pagination {
   margin-top: 20px;
   text-align: center;

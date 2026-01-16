@@ -50,10 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
           return;
         }
 
-        console.log('加载到的歌曲:', songs);
-
         // 5. 动态生成播放列表
-        console.log('开始动态生成播放列表');
         domElements.musicList.innerHTML = '';
         songs.forEach((song, index) => {
           const li = document.createElement('li');
@@ -68,13 +65,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 更新DOM元素引用
         const musicItems = document.querySelectorAll('.music-item');
-        console.log('生成了', musicItems.length, '个播放列表项');
+
 
         // 6. 创建音频元素（直接使用原生audio元素，更可靠）
         const audio = new Audio();
         audio.volume = 0.7;
         audio.loop = false;
-        console.log('创建了原生音频元素');
+
 
         // 7. 播放器状态
         let currentIndex = 0;
@@ -96,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 8. 更新进度条的函数
         function updateProgressBar(currentTime, duration) {
           if (isNaN(duration) || duration <= 0) {
-            console.log('无效的duration:', duration);
+
             return;
           }
           const percent = (currentTime / duration) * 100;
@@ -255,14 +252,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 14. 加载歌词的函数
         function loadLyrics(url) {
-          console.log('开始加载歌词:', url);
+
           fetch(url)
             .then(response => response.text())
             .then(text => {
-              console.log('歌词加载成功，开始解析');
+
               lrcData = parseLRC(text);
               currentLineIndex = 0;
-              console.log('解析出', lrcData.length, '行歌词');
+
               renderLyrics();
             })
             .catch(error => {
@@ -275,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 15. 加载并播放指定索引的歌曲
         function loadAndPlay(index) {
-          console.log('加载并播放歌曲索引:', index);
+
           if (index < 0 || index >= songs.length) {
             console.error('无效的歌曲索引:', index);
             return;
@@ -322,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (domElements.playPauseBtn.querySelector('i')) {
               domElements.playPauseBtn.querySelector('i').className = 'fas fa-pause';
             }
-            console.log('歌曲开始播放');
+
           }).catch(error => {
             console.error('播放失败:', error);
             isPlaying = false;
@@ -331,14 +328,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 16. 播放/暂停切换
         function togglePlayPause() {
-          console.log('切换播放/暂停状态，当前状态:', isPlaying);
+
           if (isPlaying) {
             audio.pause();
             isPlaying = false;
             if (domElements.playPauseBtn.querySelector('i')) {
               domElements.playPauseBtn.querySelector('i').className = 'fas fa-play';
             }
-            console.log('暂停播放');
+
           } else {
             if (audio.src) {
               audio.play().then(() => {
@@ -346,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (domElements.playPauseBtn.querySelector('i')) {
                   domElements.playPauseBtn.querySelector('i').className = 'fas fa-pause';
                 }
-                console.log('开始播放');
+
               }).catch(error => {
                 console.error('播放失败:', error);
               });
@@ -359,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 17. 播放下一首
         function playNext() {
-          console.log('播放下一首');
+
           let nextIndex;
           
           if (playMode === 2) {
@@ -380,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 18. 播放上一首
         function playPrev() {
-          console.log('播放上一首，当前播放模式:', playMode);
+
           let prevIndex;
           if (playMode === 1) { // 随机播放
             prevIndex = Math.floor(Math.random() * songs.length);
@@ -399,7 +396,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function togglePlayMode() {
           // 循环切换播放模式：0-顺序播放，1-随机播放，2-单曲循环
           playMode = (playMode + 1) % 3;
-          console.log('切换播放模式:', playMode);
+
           
           const icon = domElements.randomBtn.querySelector('i');
           if (icon) {
@@ -432,7 +429,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 24. 绑定进度条点击
         domElements.progressContainer.addEventListener('click', (e) => {
-          console.log('点击进度条');
+
           const rect = domElements.progressContainer.getBoundingClientRect();
           const percent = (e.clientX - rect.left) / rect.width;
           const seekTime = percent * audio.duration;
@@ -444,7 +441,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 25. 绑定音量条点击
         if (domElements.volumeBar) {
           domElements.volumeBar.addEventListener('click', (e) => {
-            console.log('点击音量条');
+
             const rect = domElements.volumeBar.getBoundingClientRect();
             const percent = (e.clientX - rect.left) / rect.width;
             audio.volume = percent;
@@ -534,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 26. 绑定播放列表点击
         musicItems.forEach((item, index) => {
           item.addEventListener('click', () => {
-            console.log('点击播放列表项:', index);
+  
             loadAndPlay(index);
           });
         });
@@ -580,7 +577,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         audio.addEventListener('loadedmetadata', () => {
-          console.log('音频元数据加载完成，时长:', audio.duration);
+
           
           // 更新当前歌曲的时长显示
           const durationElement = musicItems[currentIndex].querySelector('.music-duration');
@@ -595,7 +592,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         audio.addEventListener('ended', () => {
-          console.log('歌曲播放结束');
+
           playNext();
         });
 
@@ -604,7 +601,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if (domElements.playPauseBtn.querySelector('i')) {
             domElements.playPauseBtn.querySelector('i').className = 'fas fa-pause';
           }
-          console.log('音频开始播放');
+
         });
 
         audio.addEventListener('pause', () => {
@@ -612,7 +609,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if (domElements.playPauseBtn.querySelector('i')) {
             domElements.playPauseBtn.querySelector('i').className = 'fas fa-play';
           }
-          console.log('音频暂停');
+
         });
 
         // 28. 初始化第一首歌的信息
@@ -640,7 +637,7 @@ document.addEventListener('DOMContentLoaded', function() {
           loadLyrics(firstSong.lrc);
         }
 
-        console.log('音乐播放器初始化成功');
+
       })
       .catch(error => {
         console.error('加载歌曲数据失败:', error);
