@@ -5376,6 +5376,7 @@ figure.highlight pre .javascript .function {
 @media screen and (max-width: 768px) {
   #nav {
     padding: 0 16px;
+    font-size: 1.1em;
   }
 }
 #nav.show {
@@ -5397,6 +5398,11 @@ figure.highlight pre .javascript .function {
   margin-right: 6px;
   height: 36px;
   vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  #nav #blog-info .site-icon {
+    height: 28px;
+  }
 }
 #nav #blog-info .nav-page-title {
   display: none;

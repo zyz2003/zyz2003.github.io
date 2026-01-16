@@ -44,6 +44,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px !important;
 }
 
+/* 手机端调整网站图标大小 */
+@media screen and (max-width: 768px) {
+  #nav #blog-info .site-icon {
+    height: 28px !important;
+    width: 28px !important;
+    margin-right: 6px !important;
+  }
+}
+
 /* 放大导航栏网站名称 */
 #nav .site-name {
   font-size: 1.3em !important;
@@ -163,10 +172,47 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 60px !important;
 }
 
+/* 手机端调整导航栏整体样式 */
+@media screen and (max-width: 768px) {
+  /* 调整导航栏整体字体大小 */
+  #nav {
+    font-size: 1.1em !important;
+  }
+  
+  /* 调整blog-info容器大小 */
+  #nav #blog-info {
+    font-size: 1.0em !important;
+  }
+  
+  /* 调整导航栏网站名称大小 */
+  #nav .site-name {
+    font-size: 1.1em !important;
+  }
+  
+  /* 调整site-page图标大小 */
+  #nav .site-page .fa-fw {
+    font-size: 14px !important;
+    margin-right: 4px !important;
+  }
+  
+  /* 调整site-page容器内边距 */
+  #nav .site-page {
+    padding-bottom: 4px !important;
+  }
+}
+
 /* 调整导航栏图标大小 */
 #nav .fa-fw {
   font-size: 16px !important;
   margin-right: 6px !important;
+}
+
+/* 手机端调整所有导航栏图标大小 */
+@media screen and (max-width: 768px) {
+  #nav .fa-fw {
+    font-size: 14px !important;
+    margin-right: 4px !important;
+  }
 }
 
 /* SVG图标样式调整 */
@@ -195,6 +241,110 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-icon:hover svg.icon {
   transform: rotate(360deg) !important;
+}
+
+/* 手机端调整SVG图标大小 */
+@media screen and (max-width: 768px) {
+  /* 调整导航栏SVG图标大小 */
+  #nav svg.icon {
+    width: 1.2em !important;
+    height: 1.2em !important;
+  }
+  
+  /* 调整社交图标中的SVG图标大小 */
+  .social-icon svg.icon {
+    width: 1.0em !important;
+    height: 1.0em !important;
+    top: -2px !important;
+  }
+  
+  /* 调整site-page中的SVG图标大小 */
+  #nav .site-page svg.icon {
+    width: 1.2em !important;
+    height: 1.2em !important;
+  }
+  
+  /* 调整site-page faa-parent animated-hover图标大小 */
+  #nav .site-page.faa-parent.animated-hover {
+    font-size: 1.0em !important;
+  }
+  
+  /* 调整faa-parent容器内的图标大小 */
+  #nav .faa-parent i {
+    font-size: 14px !important;
+  }
+  
+  /* 强制调整导航菜单中所有SVG图标的大小 */
+  #nav .menus_items .menus_item a.site-page svg.icon,
+  #nav .menus_items .menus_item span.site-page svg.icon {
+    width: 16px !important;
+    height: 16px !important;
+    vertical-align: middle !important;
+  }
+  
+  /* 强制调整移动端导航菜单图标大小 */
+  #nav.hide-menu #toggle-menu svg.icon,
+  #nav.hide-menu #search-button svg.icon,
+  #nav.hide-menu #custom-setting-button svg.icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  /* 针对完整HTML结构的强制图标大小调整 */
+  .menus_item a.site-page.faa-parent.animated-hover svg.icon.faa-tada,
+  .menus_item span.site-page.faa-parent.animated-hover svg.icon.faa-tada,
+  .menus_item span.site-page.group.faa-parent.animated-hover svg.icon {
+    width: 16px !important;
+    height: 16px !important;
+    vertical-align: middle !important;
+    /* 直接覆盖内联样式 */
+    max-width: 16px !important;
+    max-height: 16px !important;
+  }
+  
+  /* 确保导航菜单图标不会被其他样式影响 */
+  #nav .menus_items .menus_item svg.icon,
+  #nav .menus_items .menus_item span.site-page.group svg.icon {
+    width: 16px !important;
+    height: 16px !important;
+    vertical-align: middle !important;
+    /* 直接覆盖内联样式 */
+    max-width: 16px !important;
+    max-height: 16px !important;
+  }
+  
+  /* 调整子菜单图标大小 */
+  .menus_item_child li a.site-page.child.faa-parent.animated-hover svg.icon.faa-tada {
+    width: 16px !important;
+    height: 16px !important;
+    vertical-align: middle !important;
+    /* 直接覆盖内联样式 */
+    max-width: 16px !important;
+    max-height: 16px !important;
+  }
+  
+  /* 调整移动端导航菜单中所有图标大小 */
+  #nav.hide-menu .menus_items .menus_item svg.icon,
+  #nav.hide-menu .menus_items .menus_item span.site-page.group svg.icon,
+  #nav.hide-menu .menus_item_child li a.site-page.child svg.icon {
+    width: 16px !important;
+    height: 16px !important;
+    vertical-align: middle !important;
+    /* 直接覆盖内联样式 */
+    max-width: 16px !important;
+    max-height: 16px !important;
+  }
+  
+  /* 确保所有SVG图标在手机端都能正确显示 */
+  /* 强制所有SVG图标大小 */
+  svg.icon {
+    width: 16px !important;
+    height: 16px !important;
+    vertical-align: middle !important;
+    /* 直接覆盖内联样式 */
+    max-width: 16px !important;
+    max-height: 16px !important;
+  }
 }
 
 /* 页脚与头图透明 */

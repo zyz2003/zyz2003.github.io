@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zyz2003.github.io/leisure/games/index.html</loc>
+    
+    <lastmod>2026-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zyz2003.github.io/posts/668d4daa/</loc>
+    
+    <lastmod>2026-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zyz2003.github.io/posts/668d4dca/</loc>
+    
+    <lastmod>2026-01-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zyz2003.github.io/posts/668d4dbc/</loc>
     
     <lastmod>2026-01-16</lastmod>
@@ -101,24 +128,6 @@
   </url>
   
   <url>
-    <loc>http://zyz2003.github.io/posts/668d4daa/</loc>
-    
-    <lastmod>2026-01-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zyz2003.github.io/posts/668d4dca/</loc>
-    
-    <lastmod>2026-01-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zyz2003.github.io/personal/love/%E9%81%97%E6%86%BE%E7%9A%84%E8%BF%87%E5%8E%BB.html</loc>
     
     <lastmod>2026-01-14</lastmod>
@@ -199,15 +208,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://zyz2003.github.io/leisure/movies/index.html</loc>
-    
-    <lastmod>2025-10-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>http://zyz2003.github.io/</loc>
@@ -267,6 +267,20 @@
   </url>
   
   <url>
+    <loc>http://zyz2003.github.io/tags/Git/</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://zyz2003.github.io/tags/Ubuntu/</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://zyz2003.github.io/tags/Docker/</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -282,20 +296,6 @@
   
   <url>
     <loc>http://zyz2003.github.io/tags/%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2026-01-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://zyz2003.github.io/tags/Ubuntu/</loc>
-    <lastmod>2026-01-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://zyz2003.github.io/tags/Git/</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
