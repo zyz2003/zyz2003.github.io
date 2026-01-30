@@ -6,8 +6,8 @@
   // 默认配置（作为后备值，当GLOBAL_CONFIG不可用时使用）
   // 会被GLOBAL_CONFIG中的customSetting配置覆盖
   let defaultConfig = {
-    background_day: 'https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/images/95B6A6A6E163D50B92295B6E65E609F5.JPG',
-    background_night: 'https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/images/9A60B95081CBBEC139E6B556005C5604.jpg',
+    background_day: 'https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/images/95B6A6A6E163D50B92295B6E65E609F5.JPG',
+    background_night: 'https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/images/9A60B95081CBBEC139E6B556005C5604.jpg',
     card_opacity: 0.6,
     enable_canvas_nest: true,
     global_font: 'ZihunBaiGeTianXing, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',

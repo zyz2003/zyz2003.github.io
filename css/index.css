@@ -1775,8 +1775,8 @@ input::placeholder {
   transition: background-image 1s ease-in-out;
 }
 :root {
-  --day-bg: url("https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/images/95B6A6A6E163D50B92295B6E65E609F5.JPG");
-  --night-bg: url("https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/images/9A60B95081CBBEC139E6B556005C5604.jpg");
+  --day-bg: url("https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/images/95B6A6A6E163D50B92295B6E65E609F5.JPG");
+  --night-bg: url("https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/images/9A60B95081CBBEC139E6B556005C5604.jpg");
 }
 [data-theme="light"] #web_bg {
   background-image: var(--day-bg);
@@ -4934,6 +4934,18 @@ figure.highlight pre .javascript .function {
   background-attachment: scroll;
   background-position: bottom;
   background-size: cover;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 #footer:before {
   position: absolute;
@@ -4945,6 +4957,30 @@ figure.highlight pre .javascript .function {
 #footer > * {
   position: relative;
   color: var(--light-grey);
+}
+#footer .footer-other {
+  -webkit-box-ordinal-group: 9999;
+  -moz-box-ordinal-group: 9999;
+  -o-box-ordinal-group: 9999;
+  -ms-flex-order: 9999;
+  -webkit-order: 9999;
+  order: 9999;
+}
+#footer #workboard {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -o-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+#footer #ghbdages {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -o-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
 }
 #footer a {
   color: var(--light-grey);

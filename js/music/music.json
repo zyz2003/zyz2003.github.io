@@ -4,7 +4,7 @@
     "artist": "国风堂&哦漏",
     "url": "https://music.163.com/song/media/outer/url?id=1394167216.mp3",
     "cover": "https://p1.music.126.net/_etyUh1ofScyTMFArsJXWg==/109951164415301539.jpg?param=130y130",
-    "lrc": "https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/LRC/知我.lrc"
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/知我.lrc"
   },
   {
     "name": "青花瓷",
@@ -25,27 +25,83 @@
     "artist": "银临",
     "url": "https://music.163.com/song/media/outer/url?id=2094118217.mp3",
     "cover": "https://p3.music.126.net/YML7Ir-Bo1w1siux6LzxDQ==/109951170382582207.jpg?param=300y300",
-    "lrc": "https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/LRC/《沧海飞尘》歌词.lrc"
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/《沧海飞尘》歌词.lrc"
   },
   {
     "name": "莫愁乡",
     "artist": "亚细亚旷世奇才",
     "url": "https://music.163.com/song/media/outer/url?id=2711834126.mp3",
     "cover": "https://p1.music.126.net/DVi9B70oYVFtDxVqZf_56g==/109951171264259694.jpg?param=130y130",
-    "lrc": "https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/LRC/莫愁乡.lrc"
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/莫愁乡.lrc"
   },
   {
     "name": "阿苏拉则",
     "artist": "蔡青年",
     "url": "https://music.163.com/song/media/outer/url?id=535586576.mp3",
     "cover": "https://p1.music.126.net/inLQ6M7lMhcKN0bywQT0gQ==/109951164438714255.jpg?param=130y130",
-    "lrc": "https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/LRC/阿苏拉则.lrc"
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/阿苏拉则.lrc"
   },
   {
     "name": "The Truth that You Leave",
     "artist": "Pianoboy高至豪",
     "url": "https://www.qtings.com/uploads/tracks/1226101457_1889736848_2108667389.mp3",
     "cover": "https://p1.music.126.net/3HT3AxHq8uXHPbFbH7Qoyw==/109951167208222169.jpg?param=130y130",
-    "lrc": "https://cdn.jsdelivr.net/gh/zyz2003/CDN-Respository@main/LRC/纯音乐.lrc"
-  }  
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/纯音乐.lrc"
+  },
+  {
+    "name": "无名的人",
+    "artist": "毛不易",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/无名的人.mp3",
+    "cover": "https://p2.music.126.net/ENQekcaPSCM_JTIE_GpKBA==/109951166999254322.jpg?param=130y130",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/无名的人.lrc"
+  },
+  {
+    "name": "归期",
+    "artist": "钱润玉",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/归期.aac",
+    "cover": "https://p1.music.126.net/3vJuHBF8RZ6mQ6dhRZwOpQ==/109951169771325066.jpg?param=130y130",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/归期歌词.lrc"
+  },
+  {
+    "name": "爱情讯息",
+    "artist": "郭静",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/爱情讯息.mp3",
+    "cover": "https://p1.music.126.net/-ccXZvLLbvLQc99YEbylUA==/109951171316025348.jpg?param=130y130",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/爱情讯息.lrc"
+  },
+  {
+    "name": "第57次取消发送",
+    "artist": "菲菲公主（陆绮菲）",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/第57次取消发送.mp3",
+    "cover": "https://p1.music.126.net/urn8LGHXlT4XLnpliFBXLQ==/109951171482450403.jpg?param=130y130",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/第57次取消发送.lrc"
+  },
+  {
+    "name": "把回忆拼好给你",
+    "artist": "苏星捷",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/把回忆拼好给你.mp3",
+    "cover": "https://img2.kuwo.cn/star/albumcover/120/3/37/551721716.jpg",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/把回忆拼好给你.lrc"
+  },
+  {
+    "name": "错位时空",
+    "artist": "艾辰",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/错位时空.mp3",
+    "cover": "https://p2.music.126.net/8C0lwLE88j9ZwLyPQ9a4FA==/109951165595770076.jpg?param=130y130",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/错位时空.lrc"
+  },
+  {
+    "name": "沦陷",
+    "artist": "王靖雯",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/沦陷.aac",
+    "cover": "https://img2.kuwo.cn/star/albumcover/120/57/19/2473441268.jpg",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/沦陷.lrc"
+  },
+  {
+    "name": "秋殇别恋",
+    "artist": "马跃展",
+    "url": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/music/秋殇别恋.mp3",
+    "cover": "https://img2.kuwo.cn/star/albumcover/120/26/75/1482661896.jpg",
+    "lrc": "https://cdn.jsdmirror.com/gh/zyz2003/CDN-Respository@main/LRC/秋殇别恋.lrc"
+  }
 ]
